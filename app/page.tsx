@@ -7,12 +7,14 @@ import { useState } from "react";
 export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
+  const term = searchTerm === "" ? undefined : searchTerm;
+
   const { results: users, isLoading } = usePaginatedQuery(
     api.queries.paginate,
     {
-      searchTerm: searchTerm === "" ? undefined : searchTerm,
+      searchTerm: term,
     },
-    { initialNumItems: 25 }
+    { initialNumItems: 10 }
   );
 
   return (

@@ -14,7 +14,7 @@ export const paginate = query({
     return filter(ctx.db.query("users"), (user) => {
       return term ? user.name.toLowerCase().includes(term) : true;
     })
-      .order("desc")
+      .order("asc")
       .paginate(args.paginationOpts);
   },
 });
