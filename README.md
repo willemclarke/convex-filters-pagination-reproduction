@@ -1,5 +1,7 @@
 The issue I've found when trying to use the `filter` helper from "convex-helpers/server/filter" when using convex pagination is that it seems to not find results that aren't on the first page.
 
+Issue in question: https://github.com/get-convex/convex-helpers/issues/864
+
 Steps:
 
 - `git clone`
